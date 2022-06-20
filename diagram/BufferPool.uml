@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.clients.producer.internals.BufferPool</OriginalElement>
+  <nodes>
+    <node x="294.5" y="175.0">org.apache.kafka.clients.producer.internals.BufferPool</node>
+  </nodes>
+  <notes>
+    <note x="10.0" y="0.0">
+      <node>org.apache.kafka.clients.producer.internals.BufferPool</node>
+      <value>KafkaProducer是一个Kafka客户端实现，可以发布记录records至Kafka集群。\nKafkaProducer是线程安全的，多线程之间共享单独一个producer实例通常会比多个producer实例要快。\nKafkaProducer包含一组缓存池空间，存储尚未传输到集群的记录records，\n同时，一个后台的I/O线程负责将这些记录转换成请求，并发送至集群。\n使用之后关闭producer失败将会导致这些资源泄露。</value>
+      <edge>
+        <point x="0.0" y="-15.0" />
+        <point x="0.0" y="62.5" />
+      </edge>
+    </note>
+  </notes>
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="759.5" y="15.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

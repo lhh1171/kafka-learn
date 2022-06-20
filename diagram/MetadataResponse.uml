@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.common.requests.MetadataResponse</OriginalElement>
+  <nodes>
+    <node x="28.0" y="80.0">org.apache.kafka.common.requests.AbstractResponse</node>
+    <node x="28.0" y="160.0">org.apache.kafka.common.requests.MetadataResponse</node>
+    <node x="0.0" y="0.0">org.apache.kafka.common.requests.AbstractRequestResponse</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.kafka.common.requests.MetadataResponse" target="org.apache.kafka.common.requests.AbstractResponse">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.requests.AbstractResponse" target="org.apache.kafka.common.requests.AbstractRequestResponse">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="116.0" y="95.0" />
+  <SelectedNodes>
+    <node>org.apache.kafka.common.requests.MetadataResponse</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

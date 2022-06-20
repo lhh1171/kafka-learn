@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>kafka.server.KafkaServer</OriginalElement>
+  <nodes>
+    <node x="0.0" y="80.0">kafka.metrics.KafkaMetricsGroup</node>
+    <node x="91.25" y="0.0">kafka.utils.Logging</node>
+    <node x="75.25" y="160.0">kafka.server.KafkaServer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="kafka.server.KafkaServer" target="kafka.metrics.KafkaMetricsGroup">
+      <point x="-34.0" y="-15.0" />
+      <point x="109.25" y="135.0" />
+      <point x="92.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="kafka.server.KafkaServer" target="kafka.utils.Logging">
+      <point x="34.0" y="-15.0" />
+      <point x="177.25" y="135.0" />
+      <point x="194.5" y="135.0" />
+      <point x="194.5" y="55.0" />
+      <point x="169.25" y="55.0" />
+      <point x="26.0" y="15.0" />
+    </edge>
+    <edge source="kafka.metrics.KafkaMetricsGroup" target="kafka.utils.Logging">
+      <point x="0.0" y="-15.0" />
+      <point x="92.0" y="55.0" />
+      <point x="117.25" y="55.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="106.0" y="95.0" />
+  <SelectedNodes>
+    <node>kafka.server.KafkaServer</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

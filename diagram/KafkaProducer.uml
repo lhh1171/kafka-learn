@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.clients.producer.KafkaProducer</OriginalElement>
+  <nodes>
+    <node x="336.0" y="240.0">org.apache.kafka.clients.producer.KafkaProducer</node>
+    <node x="0.0" y="320.0">org.apache.kafka.clients.producer.KafkaProducer.InterceptorCallback</node>
+    <node x="356.0" y="160.0">org.apache.kafka.clients.producer.Producer</node>
+    <node x="432.0" y="320.0">org.apache.kafka.clients.producer.KafkaProducer.FutureFailure</node>
+    <node x="352.0" y="80.0">java.io.Closeable</node>
+    <node x="336.0" y="0.0">java.lang.AutoCloseable</node>
+    <node x="220.0" y="320.0">org.apache.kafka.clients.producer.KafkaProducer.ClusterAndWaitTime</node>
+    <node x="604.0" y="320.0">org.apache.kafka.streams.integration.EosBetaUpgradeIntegrationTest.ErrorInjector</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.kafka.clients.producer.Producer" target="java.io.Closeable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.KafkaProducer.InterceptorCallback" target="org.apache.kafka.clients.producer.KafkaProducer">
+      <point x="0.0" y="-15.0" />
+      <point x="100.0" y="290.0" />
+      <point x="355.0" y="290.0" />
+      <point x="-57.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.KafkaProducer.ClusterAndWaitTime" target="org.apache.kafka.clients.producer.KafkaProducer">
+      <point x="0.0" y="-15.0" />
+      <point x="316.0" y="300.0" />
+      <point x="393.0" y="300.0" />
+      <point x="-19.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.KafkaProducer.FutureFailure" target="org.apache.kafka.clients.producer.KafkaProducer">
+      <point x="0.0" y="-15.0" />
+      <point x="508.0" y="300.0" />
+      <point x="431.0" y="300.0" />
+      <point x="19.0" y="15.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.KafkaProducer" target="org.apache.kafka.clients.producer.Producer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.streams.integration.EosBetaUpgradeIntegrationTest.ErrorInjector" target="org.apache.kafka.clients.producer.KafkaProducer">
+      <point x="0.0" y="-15.0" />
+      <point x="680.0" y="290.0" />
+      <point x="469.0" y="290.0" />
+      <point x="57.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="378.0" y="175.0" />
+  <SelectedNodes>
+    <node>org.apache.kafka.streams.integration.EosBetaUpgradeIntegrationTest.ErrorInjector</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

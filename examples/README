@@ -1,0 +1,19 @@
+This directory contains examples of client code that uses kafka.
+
+To run the demo:
+
+   1. Start Zookeeper and the Kafka server
+   2. For unlimited sync-producer-consumer run, `run bin/java-producer-consumer-demo.sh sync`
+   3. For unlimited async-producer-consumer run, `run bin/java-producer-consumer-demo.sh`
+   4. For exactly once demo run, `run bin/exactly-once-demo.sh 6 3 50000`,
+      this means we are starting 3 EOS instances with 6 topic partitions and 50000 pre-populated records.
+   5. Some notes for exactly once demo:
+      5.1. The Kafka server has to be on broker version 2.5 or higher.
+      5.2. You could also use Intellij to run the example directly by configuring parameters as "Program arguments"
+    1. 启动 Zookeeper 和 Kafka 服务器
+    2. 对于无限制的同步生产者-消费者运行，`run binjava-producer-consumer-demo.sh sync`
+    3. 对于无限制的异步生产者-消费者运行，`运行 binjava-producer-consumer -demo.sh`
+    4. 只运行一次演示，`run binexactly-once-demo.sh 6 3 50000`，这意味着我们将启动 3 个 EOS 实例，其中包含 6 个主题分区和 50000 条预填充记录。
+    5. 一次演示的一些注意事项：
+    5.1。 Kafka 服务器必须在代理版本 2.5 或更高版本上。
+    5.2.您还可以通过将参数配置为“程序参数”来使用 Intellij 直接运行示例
