@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.clients.Metadata</OriginalElement>
+  <nodes>
+    <node x="0.0" y="240.0">org.apache.kafka.clients.producer.internals.ProducerMetadata</node>
+    <node x="126.0" y="80.0">java.io.Closeable</node>
+    <node x="130.0" y="160.0">org.apache.kafka.clients.Metadata</node>
+    <node x="110.0" y="0.0">java.lang.AutoCloseable</node>
+    <node x="196.0" y="240.0">org.apache.kafka.clients.consumer.internals.ConsumerMetadata</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.kafka.clients.consumer.internals.ConsumerMetadata" target="org.apache.kafka.clients.Metadata">
+      <point x="0.0" y="-15.0" />
+      <point x="284.0" y="215.0" />
+      <point x="214.0" y="215.0" />
+      <point x="28.0" y="15.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.Metadata" target="java.io.Closeable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.internals.ProducerMetadata" target="org.apache.kafka.clients.Metadata">
+      <point x="0.0" y="-15.0" />
+      <point x="88.0" y="215.0" />
+      <point x="158.0" y="215.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="76.0" y="95.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

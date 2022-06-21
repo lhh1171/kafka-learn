@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.common.network.Selectable</OriginalElement>
+  <nodes>
+    <node x="688.0" y="0.0">org.apache.kafka.common.network.Selectable</node>
+    <node x="0.0" y="325.0">kafka.network.SocketServerTest.TestableSelector.PollData</node>
+    <node x="274.0" y="245.0">kafka.network.SocketServerTest.TestableSelector</node>
+    <node x="0.0" y="170.0">org.apache.kafka.common.network.Selector.CloseMode</node>
+    <node x="622.0" y="80.0">org.apache.kafka.common.network.Selector</node>
+    <node x="472.0" y="170.0">org.apache.kafka.common.network.Selector.SelectorMetrics</node>
+    <node x="376.0" y="325.0">kafka.network.SocketServerTest.TestableSelector.DisconnectedPollData</node>
+    <node x="754.0" y="80.0">org.apache.kafka.test.MockSelector</node>
+    <node x="604.0" y="325.0">kafka.network.SocketServerTest.TestableSelector.CompletedReceivesPollData</node>
+    <node x="660.0" y="170.0">org.apache.kafka.common.network.SelectorTest.ImmediatelyConnectingSelector</node>
+    <node x="960.0" y="170.0">org.apache.kafka.common.network.Selector.SelectorChannelMetadataRegistry</node>
+    <node x="132.0" y="325.0">kafka.network.SocketServerTest.TestableSelector.CompletedSendsPollData</node>
+    <node x="1276.0" y="170.0">org.apache.kafka.common.network.Selector.IdleExpiryManager</node>
+    <node x="140.0" y="170.0">org.apache.kafka.common.network.Selector.DelayedAuthenticationFailureClose</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.kafka.common.network.Selector.CloseMode" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="60.0" y="130.0" />
+      <point x="631.3333333333334" y="130.0" />
+      <point x="-46.66666666666663" y="15.0" />
+    </edge>
+    <edge source="kafka.network.SocketServerTest.TestableSelector.PollData" target="kafka.network.SocketServerTest.TestableSelector">
+      <point x="0.0" y="-15.0" />
+      <point x="56.0" y="295.0" />
+      <point x="296.0" y="295.0" />
+      <point x="-66.0" y="15.0" />
+    </edge>
+    <edge source="kafka.network.SocketServerTest.TestableSelector.CompletedReceivesPollData" target="kafka.network.SocketServerTest.TestableSelector">
+      <point x="0.0" y="-15.0" />
+      <point x="728.0" y="295.0" />
+      <point x="428.0" y="295.0" />
+      <point x="66.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.Selector.DelayedAuthenticationFailureClose" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="296.0" y="140.0" />
+      <point x="650.0" y="140.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.Selector.SelectorMetrics" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="556.0" y="150.0" />
+      <point x="668.6666666666666" y="150.0" />
+      <point x="-9.333333333333371" y="15.0" />
+    </edge>
+    <edge source="kafka.network.SocketServerTest.TestableSelector.CompletedSendsPollData" target="kafka.network.SocketServerTest.TestableSelector">
+      <point x="0.0" y="-15.0" />
+      <point x="244.0" y="305.0" />
+      <point x="340.0" y="305.0" />
+      <point x="-22.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.Selector" target="org.apache.kafka.common.network.Selectable">
+      <point x="0.0" y="-15.0" />
+      <point x="678.0" y="55.0" />
+      <point x="720.0" y="55.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.SelectorTest.ImmediatelyConnectingSelector" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="800.0" y="150.0" />
+      <point x="687.3333333333334" y="150.0" />
+      <point x="9.333333333333371" y="15.0" />
+    </edge>
+    <edge source="kafka.network.SocketServerTest.TestableSelector.DisconnectedPollData" target="kafka.network.SocketServerTest.TestableSelector">
+      <point x="0.0" y="-15.0" />
+      <point x="480.0" y="305.0" />
+      <point x="384.0" y="305.0" />
+      <point x="22.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.Selector.SelectorChannelMetadataRegistry" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="1108.0" y="140.0" />
+      <point x="706.0" y="140.0" />
+      <point x="28.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.common.network.Selector.IdleExpiryManager" target="org.apache.kafka.common.network.Selector">
+      <point x="0.0" y="-15.0" />
+      <point x="1368.0" y="130.0" />
+      <point x="724.6666666666666" y="130.0" />
+      <point x="46.66666666666663" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.test.MockSelector" target="org.apache.kafka.common.network.Selectable">
+      <point x="0.0" y="-15.0" />
+      <point x="826.0" y="55.0" />
+      <point x="784.0" y="55.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="642.0" y="29.0" />
+  <SelectedNodes>
+    <node>kafka.network.SocketServerTest.TestableSelector</node>
+    <node>org.apache.kafka.common.network.Selector</node>
+    <node>org.apache.kafka.test.MockSelector</node>
+    <node>org.apache.kafka.common.network.SelectorTest.ImmediatelyConnectingSelector</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

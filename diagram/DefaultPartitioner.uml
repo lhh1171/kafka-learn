@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.kafka.clients.producer.internals.DefaultPartitioner</OriginalElement>
+  <nodes>
+    <node x="0.0" y="80.0">org.apache.kafka.common.Configurable</node>
+    <node x="164.0" y="80.0">java.io.Closeable</node>
+    <node x="51.999999999999986" y="240.0">org.apache.kafka.clients.producer.internals.DefaultPartitioner</node>
+    <node x="79.99999999999999" y="160.0">org.apache.kafka.clients.producer.Partitioner</node>
+    <node x="147.99999999999997" y="0.0">java.lang.AutoCloseable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="-1.4210854715202004E-14" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.Partitioner" target="org.apache.kafka.common.Configurable">
+      <point x="-34.0" y="-15.0" />
+      <point x="113.99999999999999" y="135.0" />
+      <point x="72.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.Partitioner" target="java.io.Closeable">
+      <point x="34.0" y="-15.0" />
+      <point x="182.0" y="135.0" />
+      <point x="224.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.internals.DefaultPartitioner" target="org.apache.kafka.clients.producer.Partitioner">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="150.0" y="135.0" />
+  <SelectedNodes>
+    <node>org.apache.kafka.clients.producer.internals.DefaultPartitioner</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

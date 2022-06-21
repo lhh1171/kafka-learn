@@ -14,15 +14,15 @@
   </nodes>
   <notes />
   <edges>
-    <edge source="org.apache.kafka.clients.producer.Producer" target="java.io.Closeable">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
     <edge source="org.apache.kafka.clients.producer.KafkaProducer.InterceptorCallback" target="org.apache.kafka.clients.producer.KafkaProducer">
       <point x="0.0" y="-15.0" />
       <point x="100.0" y="290.0" />
       <point x="355.0" y="290.0" />
       <point x="-57.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.kafka.clients.producer.Producer" target="java.io.Closeable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="org.apache.kafka.clients.producer.KafkaProducer.ClusterAndWaitTime" target="org.apache.kafka.clients.producer.KafkaProducer">
       <point x="0.0" y="-15.0" />

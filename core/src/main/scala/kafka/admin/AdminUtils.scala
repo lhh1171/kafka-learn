@@ -105,17 +105,17 @@ object AdminUtils extends Logging {
                               replicationFactor: Int,
                               fixedStartIndex: Int = -1,
                               startPartitionId: Int = -1): Map[Int, Seq[Int]] = {
-    if (nPartitions <= 0)
+    if (nPartitions <= 0)// note: 要增加的 partition 数需要大于0
       throw new InvalidPartitionsException("Number of partitions must be larger than 0.")
-    if (replicationFactor <= 0)
+    if (replicationFactor <= 0)//note: replicas 应该大于0
       throw new InvalidReplicationFactorException("Replication factor must be larger than 0.")
-    if (replicationFactor > brokerMetadatas.size)
+    if (replicationFactor > brokerMetadatas.size) //note: replicas 超过了 broker 数
       throw new InvalidReplicationFactorException(s"Replication factor: $replicationFactor larger than available brokers: ${brokerMetadatas.size}.")
-    if (brokerMetadatas.forall(_.rack.isEmpty))
+    if (brokerMetadatas.forall(_.rack.isEmpty))//note: 没有开启机架感知
       assignReplicasToBrokersRackUnaware(nPartitions, replicationFactor, brokerMetadatas.map(_.id), fixedStartIndex,
         startPartitionId)
-    else {
-      if (brokerMetadatas.exists(_.rack.isEmpty))
+    else {//note: 机架感知的情况
+      if (brokerMetadatas.exists(_.rack.isEmpty))//note: 并不是所有的机架都有机架感知
         throw new AdminOperationException("Not all brokers have rack information for replica rack aware assignment.")
       assignReplicasToBrokersRackAware(nPartitions, replicationFactor, brokerMetadatas, fixedStartIndex,
         startPartitionId)
@@ -129,15 +129,15 @@ object AdminUtils extends Logging {
                                                  startPartitionId: Int): Map[Int, Seq[Int]] = {
     val ret = mutable.Map[Int, Seq[Int]]()
     val brokerArray = brokerList.toArray
-    val startIndex = if (fixedStartIndex >= 0) fixedStartIndex else rand.nextInt(brokerArray.length)
-    var currentPartitionId = math.max(0, startPartitionId)
+    val startIndex = if (fixedStartIndex >= 0) fixedStartIndex else rand.nextInt(brokerArray.length)//note: 随机选择一个Broker
+    var currentPartitionId = math.max(0, startPartitionId)//note: 开始增加的第一个 partition
     var nextReplicaShift = if (fixedStartIndex >= 0) fixedStartIndex else rand.nextInt(brokerArray.length)
-    for (_ <- 0 until nPartitions) {
+    for (_ <- 0 until nPartitions) {//note: 对每个 partition 进行分配
       if (currentPartitionId > 0 && (currentPartitionId % brokerArray.length == 0))
-        nextReplicaShift += 1
-      val firstReplicaIndex = (currentPartitionId + startIndex) % brokerArray.length
+        nextReplicaShift += 1//note: 防止 partition 过大时,其中某些 partition 的分配（leader、follower）完全一样
+      val firstReplicaIndex = (currentPartitionId + startIndex) % brokerArray.length//note: partition 的第一个 replica
       val replicaBuffer = mutable.ArrayBuffer(brokerArray(firstReplicaIndex))
-      for (j <- 0 until replicationFactor - 1)
+      for (j <- 0 until replicationFactor - 1)//note: 其他 replica 的分配
         replicaBuffer += brokerArray(replicaIndex(firstReplicaIndex, nextReplicaShift, j, brokerArray.length))
       ret.put(currentPartitionId, replicaBuffer)
       currentPartitionId += 1
@@ -230,7 +230,7 @@ object AdminUtils extends Logging {
       .groupBy { case (rack, _) => rack }
       .map { case (rack, rackAndIdList) => (rack, rackAndIdList.map { case (_, id) => id }.sorted) }
   }
-
+  //note: 为 partition 设置完第一个 replica 后,其他 replica 分配的计算
   private def replicaIndex(firstReplicaIndex: Int, secondReplicaShift: Int, replicaIndex: Int, nBrokers: Int): Int = {
     val shift = 1 + (secondReplicaShift + replicaIndex) % (nBrokers - 1)
     (firstReplicaIndex + shift) % nBrokers

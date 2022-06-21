@@ -561,10 +561,10 @@ object TopicCommand extends Logging {
     for (i <- 0 until partitionList.size) {
       val brokerList = partitionList(i).split(":").map(s => s.trim().toInt)
       val duplicateBrokers = CoreUtils.duplicates(brokerList)
-      if (duplicateBrokers.nonEmpty)
+      if (duplicateBrokers.nonEmpty)//note: 同一个 partition 对应的 replica 是不能相同的
         throw new AdminCommandFailedException(s"Partition replica lists may not contain duplicate entries: ${duplicateBrokers.mkString(",")}")
       ret.put(i, brokerList.toList)
-      if (ret(i).size != ret(0).size)
+      if (ret(i).size != ret(0).size)//note: 同一个 topic 的副本数必须相同
         throw new AdminOperationException("Partition " + i + " has different replication factor: " + brokerList)
     }
     ret
